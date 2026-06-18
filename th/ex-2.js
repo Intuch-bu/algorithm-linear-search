@@ -14,18 +14,18 @@
 
 // Start coding here
 
-function findIfProductsAvailable(products, targetProduct, targetQuantity){
-    for(let item of products){
-        if(item.name === targetProduct){
-            if(item.quantity >= targetQuantity){
-                return `${item.quantity} ${targetProduct}(s) are available at Zone ${item.zone}`
-            }else{
-                return `Sorry, we've got only ${item.quantity} ${targetProduct}(s) available at Zone ${item.zone}`
-            }
-        }
+function findIfProductsAvailable(products, targetProduct, targetQuantity) {
+  for (let item of products) {
+    if (item.name === targetProduct) {
+      if (item.quantity >= targetQuantity) {
+        return `${item.quantity} ${targetProduct}(s) are available at Zone ${item.zone}`;
+      } else {
+        return `Sorry, we've got only ${item.quantity} ${targetProduct}(s) available at Zone ${item.zone}`;
+      }
     }
-    
-    return `We don't have ${targetProduct}`
+  }
+
+  return `We don't have ${targetProduct}`;
 }
 
 const products = [
